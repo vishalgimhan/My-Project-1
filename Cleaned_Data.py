@@ -56,6 +56,6 @@ z_scores = zscore(data['Total'])
 outliers = data[abs(z_scores) > 3]
 outliers
 
-
+print("Im vidushi")
 
 
