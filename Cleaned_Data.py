@@ -41,6 +41,12 @@ duplicate_rows = data[data.duplicated()]
 print("Duplicate Rows except first occurrence:")
 print(duplicate_rows)
 
+import seaborn as sns
+
+# Boxplot for 'Total' sales
+sns.boxplot(x=data['Total'])
+plt.show()
+
 
 
 
