@@ -47,6 +47,14 @@ import seaborn as sns
 sns.boxplot(x=data['Total'])
 plt.show()
 
+from scipy.stats import zscore
+
+# Calculate z-scores for 'Total' sales
+z_scores = zscore(data['Total'])
+
+# Identify outliers based on a threshold (e.g., z_score > 3 or z_score < -3)
+outliers = data[abs(z_scores) > 3]
+outliers
 
 
 
