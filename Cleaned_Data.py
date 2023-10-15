@@ -41,6 +41,20 @@ duplicate_rows = data[data.duplicated()]
 print("Duplicate Rows except first occurrence:")
 print(duplicate_rows)
 
+import seaborn as sns
+
+# Boxplot for 'Total' sales
+sns.boxplot(x=data['Total'])
+plt.show()
+
+from scipy.stats import zscore
+
+# Calculate z-scores for 'Total' sales
+z_scores = zscore(data['Total'])
+
+# Identify outliers based on a threshold (e.g., z_score > 3 or z_score < -3)
+outliers = data[abs(z_scores) > 3]
+outliers
 
 
 
