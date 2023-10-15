@@ -58,4 +58,6 @@ outliers
 
 print("Im vidushi")
 
+#Are there missing values?
+data.isnull().sum().any()
 
